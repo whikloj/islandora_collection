@@ -1,0 +1,46 @@
+sudo: true
+language: php
+php:
+  - 5.5
+  - 5.6
+  - 7.0
+  - hhvm
+
+matrix:
+    allow_failures:
+        - php: hhvm
+    fast_finish: true
+
+branches:
+  only:
+    - /^master/
+
+addons:
+  apt:
+    packages:
+    - activemq
+
+before_install:
+  - export ISLANDORA_DIR=$TRAVIS_BUILD_DIR
+
+install:
+  - printf "no" | pecl install stomp 
+  - $TRAVIS_BUILD_DIR/.scripts/travis_setup.sh
+  - composer install
+  - php vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
+
+
+script:
+  - $ISLANDORA_DIR/.scripts/line_endings.sh .
+  - cd $HOME/drupal/modules/islandora_collection
+  - php vendor/bin/phpcs --standard=Drupal --extensions=module/php,php/php *.module
+  - php vendor/bin/phpcpd --names *.module,*.inc,*.test,*.php --exclude=vendor .
+#  - cd $HOME/drupal; php core/scripts/run-tests.sh --php `which php` islandora
+
+notifications:
+  irc:
+    channels:
+      - "irc.freenode.org#islandora"
+    on_success: change
+    on_failure: always
+    skip_join: true
