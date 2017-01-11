@@ -2,8 +2,6 @@
   "name": "islandora/islandora_collection",
   "description": "Islandora Collection",
   "type": "drupal-module",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "keywords": ["Drupal", "Islandora"],
   "license": "GPL-2.0+",
   "homepage": "https://github.com/islandora-claw/islandora_collection",
@@ -18,7 +16,7 @@
     },
     {
       "type": "vcs",
-      "url": "https://github.com/dannylamb/islandora"
+      "url": "https://github.com/Islandora-CLAW/islandora"
     },
     {
       "type": "vcs",
@@ -26,7 +24,7 @@
     }
   ],
   "require": {
-    "islandora/islandora": "dev-8.x-1.x"
+    "islandora/islandora": "dev-8.x-1.x@dev"
   },
   "require-dev": {
     "phpunit/phpunit": "^4.8",
