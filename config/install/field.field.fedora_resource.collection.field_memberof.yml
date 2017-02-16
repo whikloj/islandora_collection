@@ -7,7 +7,7 @@ dependencies:
   enforced:
     module:
       - islandora_collection
-id: fedora_resource.collection5.field_memberof
+id: fedora_resource.collection.field_memberof
 field_name: field_memberof
 entity_type: fedora_resource
 bundle: collection
