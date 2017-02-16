@@ -1,0 +1,28 @@
+uuid: b177f4ae-5ecb-4c84-b088-efe8681cfa9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.fedora_resource.collection.field_description
+    - field.field.fedora_resource.collection.field_memberof
+    - islandora.fedora_resource_type.collection
+  module:
+    - user
+id: fedora_resource.collection.default
+targetEntityType: fedora_resource
+bundle: collection
+mode: default
+content:
+  field_description:
+    type: basic_string
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_memberof:
+    type: entity_reference_entity_id
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
