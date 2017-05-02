@@ -1,4 +1,4 @@
-# Islandora Collection
+# ![Islandora Collection](https://cloud.githubusercontent.com/assets/2371345/25621707/898d9de2-2f28-11e7-96e6-eb9ba218db76.png) Islandora Collection
 [![Build Status](https://travis-ci.org/Islandora-CLAW/islandora_collection.png?branch=8.x-1.x)
 ](https://travis-ci.org/Islandora-CLAW/islandora_collection)
 [![Contribution Guidelines](http://img.shields.io/badge/CONTRIBUTING-Guidelines-blue.svg)](./CONTRIBUTING.md)
