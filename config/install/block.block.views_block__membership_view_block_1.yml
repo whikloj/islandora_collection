@@ -8,12 +8,12 @@ dependencies:
     - node
     - views
   theme:
-    - bootstrap
+    - carapace
   enforced:
     module:
       - islandora_collection
 id: views_block__membership_view_block_1
-theme: bootstrap
+theme: carapace
 region: content
 weight: 0
 provider: null
